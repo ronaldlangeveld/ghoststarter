@@ -1,0 +1,27 @@
+{{!< default}}
+
+{{>page-header}}
+
+  {{#author}}
+<section>
+<img src="{{img_url profile_image}}" alt="">
+<h2>{{name}}</h2>
+<p>{{bio}}</p>
+
+{{#if twitter}} <a href="{{twitter_url}}">Find me on twitter {{twitter}}</a> {{/if}}
+<br>
+{{#if facebook}} <a href="{{facebook_url}}">Visit my facebook page {{facebook}}</a> {{/if}}
+<br>
+{{#if website}} <a href="{{website}}">{{website}}</a> {{/if}}
+
+</ul>
+
+</section>
+
+  {{/author}}
+
+      <div class="post-feed">
+   {{#foreach posts}}
+  {{> "post-card"}}
+{{/foreach}}
+</div>

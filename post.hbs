@@ -1,0 +1,50 @@
+{{!< default}}
+
+{{>post-header}}
+
+<main class="content" id="content">
+
+  <article class="post {{post_class}}">
+
+    {{#post}}
+
+      <header>
+                      {{#if feature_image}}
+            <img src="{{img_url feature_image}}" alt="">
+            {{else}}
+             {{/if}}
+          <h1>{{title}}</h1>
+
+          <div>
+              Posted by <a href="{{url}}">{{author.name}}</a> on
+              <time datetime="{{date format='YYYY-MM-DD'}}">
+                {{date format="MMMM Do, YYYY"}}.
+              </time>
+
+              {{#if tags}}
+                <span>
+                  {{tags prefix="Tagged "}}
+                </span>
+              {{/if}}
+          </div>
+      </header>
+
+      <section>
+          {{content}}
+      </section>
+
+
+
+      <footer>
+
+          {{> author-info}} 
+
+      {{!-- {{> subscribe-widget}} --}}
+
+      </footer>
+
+
+    {{/post}}
+
+  </article>
+</main>

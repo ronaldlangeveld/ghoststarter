@@ -1,0 +1,15 @@
+{
+    "name": "Ghost Starter Theme",
+    "description": "Hello, Ghost Starter here. I'm a bare minimal starter theme. So get hacking.",
+    "version": "0.1.0",
+    "engines": {
+        "ghost": ">=1.0.0"
+    },
+    "license": "MIT",
+    "author": {
+        "email": "hi@ronaldlangeveld.com"
+    },
+    "config": {
+        "posts_per_page": 5
+    }
+}

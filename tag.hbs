@@ -1,0 +1,28 @@
+{{!< default}}
+
+{{> page-header}}
+<section>
+
+  {{#if tag.feature_image}}
+    <img src="{{tag.feature_image}}" alt="Image for {{tag.name}} tag" />
+  {{/if}}
+
+  <span >Posts Tagged:</span>
+  <h1>{{tag.name}}</h1>
+
+  <p>
+    {{tag.description}} Subscribe to this  tag’s <a href="{{@blog.url}}/tag/{{tag.slug}}/rss/">RSS feed</a> to get new {{tag.name}} posts as they’re written.
+  </p>
+
+  </span>
+
+</section>
+
+<main>
+    <div class="post-feed">
+   {{#foreach posts}}
+  {{> "post-card"}}
+{{/foreach}}
+</div>
+
+</main>

@@ -1,0 +1,36 @@
+<header class="main-header" id="main-header">
+
+  <section>
+    {{#if @blog.logo}}
+
+      <div>
+        <a href="{{@blog.url}}">
+          <img src="{{@blog.logo}}" alt="{{@blog.title}} Logo" />
+        </a>
+      </div>
+
+    {{else}}
+
+      <div>
+        <h1>
+          <a href="{{@blog.url}}">{{@blog.title}}</a>
+        </h1>
+
+    {{/if}}
+
+      <h3>
+        {{@blog.description}}
+      </h3>
+    </div> 
+
+      <nav>
+
+        {{!-- this is the navigation menu. You can customise it in the nagivation.hbs partial --}}
+          {{navigation}}
+
+
+      </nav>
+  </section>
+
+
+</header>

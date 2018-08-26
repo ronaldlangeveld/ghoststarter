@@ -1,0 +1,20 @@
+  {{#author}}
+
+<section>
+<h1>About the author:</h1>
+<img src="{{img_url profile_image}}" alt="">
+<h2>{{name}}</h2>
+<p>{{bio}}</p>
+<p><a href="{{url}}">View all posts by {{name}}</a></p>
+
+{{#if twitter}} <a href="{{twitter_url}}">Find me on twitter {{twitter}}</a> {{/if}}
+<br>
+{{#if facebook}} <a href="{{facebook_url}}">Visit my facebook page {{facebook}}</a> {{/if}}
+<br>
+{{#if website}} <a href="{{website}}">{{website}}</a> {{/if}}
+
+</ul>
+
+</section>
+
+  {{/author}}

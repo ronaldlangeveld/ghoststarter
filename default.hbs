@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{! Document Settings }}
+  <meta charset="utf-8" />
+  <meta name="HandheldFriendly" content="True" />
+  {{! This resizes for mobile}}
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {{! Makes IE support useful HTML5/CSS3 features }}
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  {{! Page Meta }}
+  <title>{{meta_title}}{{#is "post, page"}} — {{@blog.title}}{{/is}}</title>
+  <meta name="description" content="{{@blog.description}}">
+  
+
+    {{!-- Styles. If using Frameworks, remember to load the framework before your custom style. --}}
+
+    <link rel="stylesheet" type="text/css" href="{{asset "style.css"}}" />
+
+  {{! Ghost outputs important stuff with this tag }}
+  {{ghost_head}}
+</head>
+<body class="{{body_class}}" id="body">
+
+
+{{! The following is just a welcoming message. You can safely delete those lines.}}
+
+
+
+      <p>Welcome to your new GHOST STARTER Template.</p>
+      <p>I'm hardcoded, so remove me from defaults.hbs in your template directory.</p>
+    <p>Have fun hacking me!</p>
+
+
+
+  {{! Everything else gets inserted here }}
+
+
+  {{{body}}}
+
+  {{! Ideally, this is the global footer. }}
+  {{> footer}}
+
+  {{! Ghost outputs important scripts with this, including the the content for the code injection panel.  }}
+  {{ghost_foot}}
+
+<script src="{{asset "script.js"}}"></script>
+   {{#if pagination.pages}}
+    <script>
+        // maxPages is a global variable that is needed to determine
+        // if we need to load more pages for the infinitescroll, or if
+        // we reached the last page already.
+        // Delete this <script> if you don't want infinite scrolling and set the amount of posts you want to load in the package.json file.
+        // This script is from Ghost's default theme, Casper.
+        var maxPages = parseInt('{{pagination.pages}}');
+    </script>
+    <script src="{{asset "infinitescroll.js"}}"></script>
+    {{/if}}
+
+</body>
+</html>
