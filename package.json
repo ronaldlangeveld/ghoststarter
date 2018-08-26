@@ -1,7 +1,6 @@
 {
-    "name": "ghost_starter_theme",
-    "description": "The default personal blogging theme for Ghost. Beautiful, minimal and responsive.",
-    "demo": "https://demo.ghost.io",
+    "name": "ghost-starter-theme",
+    "description": "I'm a very minimal starter theme for Ghost. Use me to get started on an awesome theme.",
     "version": "0.1.2",
     "engines": {
         "ghost": ">=2.0.0"
