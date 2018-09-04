@@ -41,6 +41,7 @@ For more info regarding a development environment for Ghost and how to setup you
  - Navigation
 
  **Work in Progress**
+ - Featured Post Card
  - Subscribe Form
 
 
